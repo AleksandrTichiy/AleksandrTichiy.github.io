@@ -229,6 +229,57 @@ blockquote, q {quotes: "" "";}
 
 .container {width: 100%;max-width:1450px;margin: 0 auto}
 
+/* Всплывающая форма начата */
+.absCenter { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-box-align: center; -moz-box-align: center; -ms-flex-align: center; -webkit-align-items: center; align-items: center; -webkit-box-pack: center; -moz-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; justify-content: center; text-align: center; flex-direction: column}
+
+.d--close,.d--Inner a,.d--but, .d--show, .ani--box
+{-moz-transition: all 0.5s;-webkit-transition: all 0.5s;-o-transition: all 0.5s;-ms-transition: all 0.5s}
+
+.d--dialog{display: none;background-color: rgba(0,0,0,0.5);position: fixed;top:0;left:0;width:100%;height:100%;z-index: 1000;}
+.d--inner {background-color: #fff;padding:40px 40px;position: relative;min-width: 320px;max-width: 400px;max-height:90vh;-webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2); -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2); box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);text-align: center;}
+.d--inner h2{font-family: 'Montserrat Bold',Verdana,sans-serif;font-size: 24px; font-weight: 600;line-height: 32px;margin-bottom:14px;text-align: left}
+.d--inner > div{display: none}
+.d--inner > .d--active{display: block}
+
+.d--close{position: absolute;right: 15px;top:15px;border-radius: 50%;width: 18px;height:18px;cursor:pointer;fill:#000;stroke:#000;}
+.d--close:hover{fill:#545454;stroke:#545454;}
+
+.d--title{font-size: 14px;font-weight: 600;color:#000;width: 70%;margin: 0 auto;padding-bottom: 10px}
+
+.d--inner .d--input{width: 80%;height: 44px;border-radius: 0px;border-style: none;border-width: 1px;border-bottom: 1px solid #ccc;font-family: 'Montserrat Regular', 'OpenSans-Regular';box-sizing: border-box;padding-left: 12px;background-color: white;background-image: none;margin: 0;display: inline-block;outline: 0;color:#000;font-size: 1rem;}
+.d--inner textarea.d--input{min-height: 90px}
+
+.d--submit {margin-top: 10px;text-transform: uppercase}
+.d--but {outline: 0;display: inline-block;padding: 0 27px;text-shadow: none;text-decoration: none;background-color: #000;color: #fff;min-width: 110px;height: 44px;line-height: 44px;border-radius: 0;border-style: none;font-family: 'Montserrat Bold';font-size: 13px;letter-spacing: 2px;cursor: pointer;border:1px solid #000}
+.d--but:hover {background-color: #ffffff;color: #000000;}
+
+.d--row {margin-bottom: 10px}
+
+.d--row.f--error .d--bar:before,.d--row.f--error .d--bar:after{background-color: #ff0000}
+.d--row.f--error .d--input{border-bottom: 1px solid #ff0000}
+
+@media all and (max-width: 545px) {
+	.d--Inner {min-width: 320px;max-width: 320px;padding: 40px 20px 40px 20px;}
+}
+
+.d--additional {margin-top: 10px;font-size: 12px;text-align: right}
+.d--additional div {border-bottom: 1px dotted #333;display: inline-block;cursor: pointer}
+
+.d--hire .input-row:nth-child(4){display: none}
+
+.d--row.d--error .d--bar:before,.d--row.d--error .d--bar:after{background-color: #ff0000}
+.d--row.d--error .d--input{border-bottom: 1px solid #ff0000}
+
+.js--error-tooltip {color:var(--error);text-align: left;width: 80%;margin: 0 auto;font-size: 12px}
+
+.d--show:hover {border-color: transparent}
+
+.f--MAIL {display: none}
+
+.d--inf {border: 1px dotted #1771f1;width: 18px;height:18px;display: inline-flex;align-items: center;justify-content: center;color:#1771f1;border-radius: 50%;margin-right: 5px}
+.d--MAIL {display: none}
+/* Всплывающая форма окончена */
+
 header {height: 120px;background-color: #ffdd00}
 main {padding: 50px 0 0 0}
 footer {}
@@ -267,6 +318,8 @@ h1 {color:#534a10;font-size: 33px;font-family: Geometria-Medium}
 .section--sdelka-item {display: flex}
 .section--sdelka-item {background-color: var(--text-light);border-radius: 6px;display: flex;margin-bottom: 20px}
 .section--sdelka-item:last-child {margin-bottom: 0}
+
+.table--sortable-item {display: flex}
 
 @media all and (max-width: 1680px) {
     
