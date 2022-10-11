@@ -235,109 +235,25 @@ footer {}
 
 h1 {color:#665800;font-size: 30px;font-family: Geometria-Medium}
 
-/*------------------------------------------
-  Responsive Grid Media Queries - 1280, 1024, 768, 480
-   1280-1024   - desktop (default grid)
-   1024-768    - tablet landscape
-   768-480     - tablet
-   480-less    - phone landscape & smaller
---------------------------------------------*/
+/* Fake List */
+.select--list {position: relative;min-width: 180px}
+.select--list svg{width: 14px;height: 18px;margin-right: 5px}
+.select--list-items {display: none;opacity: 0;visibility: hidden;position: absolute;top:100%;left:0;width: 100%;height: auto;background-color: var(--white);z-index: 10;padding: 15px 0;border-bottom-left-radius: var(--b-radius-small);border-bottom-right-radius: var(--b-radius-small)}
+.select--list-item {display: flex;align-items: center;justify-content: flex-start;cursor: pointer;padding: 5px 10px;user-select: none}
+.select--list-item:hover {background-color: var(--back)}
+.select--list-item:last-child {margin-bottom: 0;}
+.select--list.opened .select--list-items {display: block;opacity: 1;visibility: visible;box-shadow: 0 7px 8px rgba(34, 34, 34, 0.15);}
+.select--list.opened .select--list-visible {border-bottom-left-radius: 0;border-bottom-right-radius: 0}
+.select--list.opened {}
+.select--list-visible {display: flex;align-items: center;justify-content: flex-start;padding: 0 20px;background-color: var(--white);border-radius: var(--b-radius-small);cursor: pointer;height: 48px;line-height: normal;transition: .5s;border: 1px solid var(--border)}
+.select--list.opened .select--list-visible {box-shadow: 0 4px 8px rgba(34, 34, 34, 0.25);}
+.select--list-visible:hover {box-shadow: 0 4px 4px rgba(34, 34, 34, 0.05);}
+
 
 @media all and (max-width: 1680px) {
     
 
 }
-
-@media all and (max-width: 1536px) {
-
-}
-
-@media all and (max-width: 1440px) {
-    html,body{
-        font-size: 80%; // 1rem = 10px и никакой попаболи как с EM
-    }
-}
-
-@media all and (max-width: 1366px) {
-
-    .sectionWrapMob{width:900px;}
-}
-
-@media all and (max-width: 1280px) {
-
-}
-
-@media all and (max-width: 1152px) {
-
-}
-
-@media all and (max-width: 1024px) {
-
-}
-
-
-@media all and (min-width: 1024px) and (max-width: 1280px) {
-
-}
-
-@media all and (min-width: 768px) and (max-width: 1024px) { }
-
-@media all and (min-width: 480px) and (max-width: 768px) { }
-
-@media all and (max-width: 480px) { }
-
-
-/* Portrait */
-@media screen and (orientation:portrait) { /* Portrait styles here */ }
-/* Landscape */
-@media screen and (orientation:landscape) { /* Landscape styles here */ }
-
-
-/* CSS for iPhone, iPad, and Retina Displays */
-
-/* Non-Retina */
-@media screen and (-webkit-max-device-pixel-ratio: 1) {
-}
-
-/* Retina */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
-}
-
-/* iPhone Portrait */
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
-}
-
-/* iPhone Landscape */
-@media screen and (max-device-width: 480px) and (orientation:landscape) {
-}
-
-/* iPad Portrait */
-@media screen and (min-device-width: 481px) and (orientation:portrait) {
-}
-
-/* iPad Landscape */
-@media screen and (min-device-width: 481px) and (orientation:landscape) {
-}
-
-
-
-/* Microsoft Edge styles */
-@supports (-ms-ime-align:auto) {
-
-}
-
-
-
-/* CSS Safari */
-@media not all and (min-resolution:.001dpcm)
-{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
-
-}}
-
-
 
 
 
