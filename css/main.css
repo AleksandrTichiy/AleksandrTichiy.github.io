@@ -233,22 +233,40 @@ header {height: 120px;background-color: #ffdd00}
 main {padding: 50px 0 0 0}
 footer {}
 
-h1 {color:#665800;font-size: 30px;font-family: Geometria-Medium}
+h1 {color:#534a10;font-size: 33px;font-family: Geometria-Medium}
+
+/* Breadcrumbs */
+.breadcrumbs {}
+.breadcrumbs span[itemprop="name"], .breadcrumbs--item{font-size: 23px;color:#7b6e46}
+.breadcrumbs--item {display: inline-block}
 
 /* Fake List */
 .select--list {position: relative;min-width: 180px}
 .select--list svg{width: 14px;height: 18px;margin-right: 5px}
-.select--list-items {display: none;opacity: 0;visibility: hidden;position: absolute;top:100%;left:0;width: 100%;height: auto;background-color: var(--white);z-index: 10;padding: 15px 0;border-bottom-left-radius: var(--b-radius-small);border-bottom-right-radius: var(--b-radius-small)}
+.select--list-items {display: none;opacity: 0;visibility: hidden;position: absolute;top:100%;left:0;width: 100%;height: auto;background-color: #fff;z-index: 10;padding: 15px 0;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px}
 .select--list-item {display: flex;align-items: center;justify-content: flex-start;cursor: pointer;padding: 5px 10px;user-select: none}
 .select--list-item:hover {background-color: var(--back)}
 .select--list-item:last-child {margin-bottom: 0;}
-.select--list.opened .select--list-items {display: block;opacity: 1;visibility: visible;box-shadow: 0 7px 8px rgba(34, 34, 34, 0.15);}
+.select--list.opened .select--list-items {display: block;opacity: 1;visibility: visible;box-shadow: 0 7px 8px rgba(34, 34, 34, 0.15);background-color: #fff;}
 .select--list.opened .select--list-visible {border-bottom-left-radius: 0;border-bottom-right-radius: 0}
 .select--list.opened {}
-.select--list-visible {display: flex;align-items: center;justify-content: flex-start;padding: 0 20px;background-color: var(--white);border-radius: var(--b-radius-small);cursor: pointer;height: 48px;line-height: normal;transition: .5s;border: 1px solid var(--border)}
+.select--list-visible {display: flex;align-items: center;justify-content: flex-start;padding: 0 20px;background-color: #fff;border-radius: 5px;cursor: pointer;height: 48px;line-height: normal;transition: .5s;border: 1px solid var(--border)}
 .select--list.opened .select--list-visible {box-shadow: 0 4px 8px rgba(34, 34, 34, 0.25);}
 .select--list-visible:hover {box-shadow: 0 4px 4px rgba(34, 34, 34, 0.05);}
 
+/* Table sortable */
+.table--sortable-headers {display: flex;margin-bottom: 12px;width: 100%}
+.table--sortable-list {width: 100%}
+.table--sortable {margin-right: 12px;background-color: var(--text-light);border-radius: 6px;padding: 0 9px;height: 22px;line-height: 22px;align-items: center;justify-content: center;cursor: pointer;transition: .5s;user-select: none}
+.table--sortable:hover {transform: translateY(-1px)}
+.table--sortable svg{width: 6px;height: 11px;margin-left: 4px;fill:var(--second-color)}
+.table--sortable.--active{background-color: var(--second-color);color: var(--text-light)}
+.table--sortable.--active svg{fill:var(--text-light)}
+.table--sortable.--active[data-direction="asc"] svg{transform: rotate(180deg)}
+
+.section--sdelka-item {display: flex}
+.section--sdelka-item {background-color: var(--text-light);border-radius: 6px;display: flex;margin-bottom: 20px}
+.section--sdelka-item:last-child {margin-bottom: 0}
 
 @media all and (max-width: 1680px) {
     

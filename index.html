@@ -37,19 +37,16 @@
 
 <main class="container">
     <h1>Соискатели с открытыми контактами</h1>
-	<div class="breadcrumbs">
-		<ul itemscope itemtype="https://schema.org/BreadcrumbList">
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<a href="/" title="Главная" itemprop="item">
-					<span itemprop="name">Главная</span>
-					<meta itemprop="position" content="0">
-				</a></li>
-			<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-				<span itemprop="item">
-					<span itemprop="name">Соискатели с открытыми контактами</span>
-					<meta itemprop="position" content="1">
-				</span></li>
-		</ul>
+	<div class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+		<div class="breadcrumbs--item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			<a href="/" title="Главная" itemprop="item">
+				<span itemprop="name">Главная</span>
+				<meta itemprop="position" content="0">
+			</a></div><div class="breadcrumbs--item breadcrumbs--separator">/</div><div class="breadcrumbs--item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			<span itemprop="item">
+				<span itemprop="name">Соискатели с открытыми контактами</span>
+				<meta itemprop="position" content="1">
+			</span></div>
 	</div>
 	<div class="filter--box">
 		<div class="filter--row">
@@ -61,14 +58,96 @@
 			</div>
 			<div class="filter--col">
 				<div class="select--list">
-					<div class="select--list-visible"><span>Бомж с рублевки</span><svg><use xlink:href="#triangle" x="0" y="0"></use></svg></div>
-					<div class="select--list-items" wfd-invisible="true">
-						<div class="select--list-item selected"><span>Бомж с рублевки</span></div>
-						<div class="select--list-item"><span>Валенок из ночлежки</span></div>
+					<div class="select--list-visible"><span>По вакансии</span><svg><use xlink:href="#triangle" x="0" y="0"></use></svg></div>
+					<div class="select--list-items">
+						<div class="select--list-item selected"><span>По вакансии</span></div>
 						<div class="select--list-item"><span>Порутчик Ржевский</span></div>
 					</div>
-					<input type="hidden" name="BORROWER" />
+					<input type="hidden" name="BY_VAKANCY" />
 				</div>
+			</div>
+			<div class="filter--col">
+				<div class="select--list">
+					<div class="select--list-visible"><span>По статусу</span><svg><use xlink:href="#triangle" x="0" y="0"></use></svg></div>
+					<div class="select--list-items">
+						<div class="select--list-item selected"><span>По статусу</span></div>
+						<div class="select--list-item"><span>Порутчик Ржевский</span></div>
+					</div>
+					<input type="hidden" name="BY_STATUS" />
+				</div>
+			</div>
+			<div class="filter--col">
+				<div class="select--list">
+					<div class="select--list-visible"><span>По Региону(ам)/Населенному(ым) пункту(ам)</span><svg><use xlink:href="#triangle" x="0" y="0"></use></svg></div>
+					<div class="select--list-items">
+						<div class="select--list-item selected"><span>По Региону(ам)/Населенному(ым) пункту(ам)</span></div>
+						<div class="select--list-item"><span>Порутчик Ржевский</span></div>
+					</div>
+					<input type="hidden" name="BY_REGION" />
+				</div>
+			</div>
+		</div>
+		<div class="filter--row">
+			<div class="filter--col">
+			</div>
+			<div class="filter--col">
+				<div class="select--list">
+					<div class="select--list-visible"><span>По возрасту</span><svg><use xlink:href="#triangle" x="0" y="0"></use></svg></div>
+					<div class="select--list-items">
+						<div class="select--list-item selected"><span>По возрасту</span></div>
+						<div class="select--list-item"><span>Порутчик Ржевский</span></div>
+					</div>
+					<input type="hidden" name="BY_AGE" />
+				</div>
+			</div>
+			<div class="filter--col">
+				<div class="select--list">
+					<div class="select--list-visible"><span>По типу добавления</span><svg><use xlink:href="#triangle" x="0" y="0"></use></svg></div>
+					<div class="select--list-items">
+						<div class="select--list-item selected"><span>По типу добавления</span></div>
+						<div class="select--list-item"><span>Порутчик Ржевский</span></div>
+					</div>
+					<input type="hidden" name="BY_TYPE" />
+				</div>
+			</div>
+			<div class="filter--col">
+				<div class="select--list">
+					<div class="select--list-visible"><span>По комментарию</span><svg><use xlink:href="#triangle" x="0" y="0"></use></svg></div>
+					<div class="select--list-items">
+						<div class="select--list-item selected"><span>По комментарию</span></div>
+						<div class="select--list-item"><span>Порутчик Ржевский</span></div>
+					</div>
+					<input type="hidden" name="BY_COMMENT" />
+				</div>
+			</div>
+			<div class="filter--col">
+				<div class="select--list">
+					<div class="select--list-visible"><span>Наличие диалога</span><svg><use xlink:href="#triangle" x="0" y="0"></use></svg></div>
+					<div class="select--list-items">
+						<div class="select--list-item selected"><span>Наличие диалога</span></div>
+						<div class="select--list-item"><span>Порутчик Ржевский</span></div>
+					</div>
+					<input type="hidden" name="BY_DIALOG" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="table--sortable">
+		<div class="table--sortable-headers">
+			<div class="table--sortable --active" data-type="string" data-direction="asc">ФИО</div>
+			<div class="table--sortable" data-type="date">Возраст/Год&nbsp;рождения</div>
+			<div class="table--sortable" data-type="string" data-direction="asc">Вакансию&nbsp;на&nbsp;которую откликнулся/Последнее активное&nbsp;резюме</div>
+			<div class="table--sortable" data-type="date">Дата добавления</div>
+			<div class="table--sortable" data-type="number" data-direction="asc">Телефон</div>
+			<div class="table--sortable" data-type="string" data-direction="asc">Регион&nbsp;и&nbsp;район проживания</div>
+			<div class="table--sortable" data-type="string" data-direction="asc">Кто добавил</div>
+			<div class="table--sortable" data-type="string" data-direction="asc">Есть диалог</div>
+			<div class="table--sortable" data-type="string" data-direction="asc">Избранное/Черный&nbsp;список</div>
+			<div class="table--sortable" data-type="string" data-direction="asc">Мои комментарии</div>
+		</div>
+		<div class="table--sortable-list">
+			<div class="table--sortable-item" data-name="invisible Friends" data-date="28.02.2022">
+				<div class=""
 			</div>
 		</div>
 	</div>
